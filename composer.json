@@ -14,8 +14,8 @@
     "php": ">=5.3.0",
     "joshcam/mysqli-database-class": "^2.5",
     "phpmailer/phpmailer": "~5.2"
+  },
+  "autoload": {
+    "files": ["helper.class.php"]
   }
-//  "autoload": {
-//    "files": ["helper.class.php"]
-//  }
 }
