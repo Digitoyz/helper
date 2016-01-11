@@ -16,16 +16,25 @@
     "phpmailer/phpmailer": "~5.2"
   },
   "autoload": {
-    "files": ["src/helper.class.php"]
+    "files": ["helper.class.php", "MyClass.php"]
   },
+
   "scripts": {
-    "post-update-cmd": [
-      "mkdir -p config",
-      "cp -R digitoyz/helper/src/config/default.php config/helperConfig.php"
+    "post-update-cmd": "digitoyz\\MyClass::postUpdate",
+    "post-package-install": [
+      "digitoyz\\MyClass::postPackageInstall"
     ],
     "post-install-cmd": [
-      "mkdir -p config",
-      "cp -R digitoyz/helper/src/config/default.php config/helperConfig.php"
+      "digitoyz\\MyClass::warmCache",
+      "phpunit -c app/"
+    ],
+    "post-autoload-dump": [
+      "digitoyz\\MyClass::postAutoloadDump"
+    ],
+    "post-create-project-cmd": [
+      "php -r \"copy('config/local-example.php', 'config/local.php');\""
     ]
   }
+
+
 }
