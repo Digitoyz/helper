@@ -1,0 +1,21 @@
+{
+  "name": "Digitoyz/helper",
+  "description": "Digitoyz Main Helper",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Saikaze",
+      "email": "saikaze@gmail.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "prefer-stable" : true,
+  "require": {
+    "php": ">=5.3.0",
+    "joshcam/mysqli-database-class": "^2.5",
+    "phpmailer/phpmailer": "~5.2"
+  }
+//  "autoload": {
+//    "files": ["helper.class.php"]
+//  }
+}
