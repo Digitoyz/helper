@@ -17,5 +17,10 @@
   },
   "autoload": {
     "files": ["helper.class.php"]
-  }
+  },
+  "scripts": {
+    "post-update-cmd": [
+      "digitoyz\\helper::initConfig"
+
+    ]}
 }

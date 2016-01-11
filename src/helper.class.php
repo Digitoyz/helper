@@ -9,6 +9,13 @@
 class helper
 {
 
+    public static function initConfig()
+    {
+        mkdir('test');
+//        copy('config/default.php', )
+
+    }
+
     /**
      *
      * @param string $sku
