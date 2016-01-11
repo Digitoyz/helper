@@ -16,16 +16,7 @@
     "phpmailer/phpmailer": "~5.2"
   },
   "autoload": {
-    "files": ["helper.class.php", "MyClass.php"],
-    "psr-0": {
-      "ComposerScript\\Installer" : ""
-    }
-  },
-  "scripts": {
-    "post-update-cmd": [
-      "ComposerScript\\Installer::postPackageUpdate"
-    ]
+    "files": ["helper.class.php"]
   }
-
 
 }
