@@ -16,23 +16,14 @@
     "phpmailer/phpmailer": "~5.2"
   },
   "autoload": {
-    "files": ["helper.class.php", "MyClass.php"]
+    "files": ["helper.class.php", "MyClass.php"],
+    "psr-0": {
+      "ComposerScript\\Installer" : ""
+    }
   },
-
   "scripts": {
-    "post-update-cmd": "digitoyz\\MyClass::postUpdate",
-    "post-package-install": [
-      "digitoyz\\MyClass::postPackageInstall"
-    ],
-    "post-install-cmd": [
-      "digitoyz\\MyClass::warmCache",
-      "phpunit -c app/"
-    ],
-    "post-autoload-dump": [
-      "digitoyz\\MyClass::postAutoloadDump"
-    ],
-    "post-create-project-cmd": [
-      "php -r \"copy('config/local-example.php', 'config/local.php');\""
+    "post-update-cmd": [
+      "ComposerScript\\Installer::postPackageUpdate"
     ]
   }
 

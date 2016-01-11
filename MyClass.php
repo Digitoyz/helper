@@ -9,6 +9,8 @@ class MyClass
 {
     public static function postUpdate(Event $event)
     {
+        $vendorDir = $event->getComposer()->getConfig()->get('vendor-dir');
+        mkdir($vendorDir . '/test');
         $composer = $event->getComposer();
         // do stuff
     }
