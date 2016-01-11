@@ -6,7 +6,7 @@
  * Time: 15:25
  */
 
-class helper
+class helperString
 {
 
     public static function csvToArray($filename)
