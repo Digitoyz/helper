@@ -16,7 +16,8 @@
     "phpmailer/phpmailer": "~5.2"
   },
   "autoload": {
-    "files": ["helper.class.php, 'helperString.class.php"]
+    "files": ["helper.class.php",
+      "helperString.class.php"]
   }
 
 }
