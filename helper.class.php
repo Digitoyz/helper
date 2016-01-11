@@ -10,14 +10,6 @@ class helper
 {
 
 
-    public static function initConfig()
-    {
-        mkdir('testowy');
-        copy('digitoyz/helper/config', 'testowy/');
-
-//        copy('config/default.php', )
-
-    }
 
     /**
      *
