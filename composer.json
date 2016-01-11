@@ -16,12 +16,16 @@
     "phpmailer/phpmailer": "~5.2"
   },
   "autoload": {
-    "files": ["src/helper.class.php", "installer.php"]
+    "files": ["src/helper.class.php"]
   },
   "scripts": {
-    "pre-install-cmd": "helper\\installer::preInstall",
     "post-update-cmd": [
-      "helper\\helper::initConfig"
+      "mkdir -p config",
+      "cp -R digitoyz/helper/src/config/default.php config/helperConfig.php"
+    ],
+    "post-install-cmd": [
+      "mkdir -p config",
+      "cp -R digitoyz/helper/src/config/default.php config/helperConfig.php"
     ]
   }
 }
