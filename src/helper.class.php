@@ -9,9 +9,12 @@
 class helper
 {
 
+
     public static function initConfig()
     {
-        mkdir('test');
+        mkdir('testowy');
+        copy('digitoyz/helper/config', 'testowy/');
+
 //        copy('config/default.php', )
 
     }
